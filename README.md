@@ -286,7 +286,6 @@ Ask your facilitator about access to a development/test landscape, and watch for
 
 ---
 
-> SAP TechEd Berlin · Deal Qualification Assistant Hands-on Session · Kiran Karadi · Internal / EAC use only
 
 **IMPORTANT**
 
