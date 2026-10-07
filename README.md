@@ -11,7 +11,6 @@ Please edit this file as it is the primary description file for your project. Yo
 
 ## AS261 — Autonomous Agents for CX
 
-## SAP TechEd Berlin, October 2026 · Hands-on Session
 
 ### Sales Cloud - Deal Qualification Assistant — Hands-on Tutorial
 
