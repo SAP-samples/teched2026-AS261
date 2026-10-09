@@ -1,19 +1,7 @@
-# Containing Files
+# AS261 — Explore Autonomous CX
 
-1. The LICENSE file:
-In most cases, the license for SAP sample projects is `Apache 2.0`.
+Hands-on experience with AI assistants and AI agents across Autonomous CX. Explore the Deal Qualification Assistant and Case Management Assistant, and see how specialized AI assistants support and enhance key customer experience processes.
 
-2. The REUSE.toml file: 
-The [Reuse Tool](https://reuse.software/) must be used for your samples project. You can find the REUSE.toml in the project initial. Please replace the parts inside the single angle quotation marks < > by the specific information for your repository.
-
-3. The README.md file (this file):
-Please edit this file as it is the primary description file for your project. You can find some placeholder titles for sections below.
-
-## AS261 — Explore Autonomous CX
-
----
-
-## Session Index
 
 ### [Part 1 · Sales Cloud — Deal Qualification Assistant](#sales-cloud---deal-qualification-assistant--hands-on-tutorial)
 
@@ -54,7 +42,7 @@ Please edit this file as it is the primary description file for your project. Yo
 
 ---
 
-### Sales Cloud - Deal Qualification Assistant — Hands-on Tutorial
+## Sales Cloud - Deal Qualification Assistant — Hands-on Tutorial
 
 > Try the Lead Enrichment, Qualification, and Conversion agents on a preconfigured SAP system
 
@@ -307,7 +295,7 @@ Ask your facilitator about access to a development/test landscape, and watch for
 
 ---
 
-### Case Management Assistant — Hands-on Tutorial
+## Case Management Assistant — Hands-on Tutorial
 
 > Try the Case Preparation, Case Processing & Case Action Recommendation Agents on a preconfigured SAP system
 >
