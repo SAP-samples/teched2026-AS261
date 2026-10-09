@@ -11,6 +11,48 @@ Please edit this file as it is the primary description file for your project. Yo
 
 ## AS261 — Explore Autonomous CX
 
+---
+
+## Session Index
+
+### [Part 1 · Sales Cloud — Deal Qualification Assistant](#sales-cloud---deal-qualification-assistant--hands-on-tutorial)
+
+- [1. Session Overview](#dqa-1-session-overview)
+- [2. What Is the Deal Qualification Assistant?](#dqa-2-what-is-the-deal-qualification-assistant)
+- [3. Meet Felicia — Why This Matters](#dqa-3-meet-felicia--why-this-matters)
+- [4. How the Assistant Works, End to End](#dqa-4-how-the-assistant-works-end-to-end)
+- [5. Prerequisites and System Access](#dqa-5-prerequisites-and-system-access)
+- [6. Hands-on Exercises](#dqa-6-hands-on-exercises)
+  - [Exercise 1 — Create a Lead](#dqa-exercise-1--create-a-lead)
+  - [Exercise 2 — Enrich the Lead](#dqa-exercise-2--enrich-the-lead-lead-enrichment-agent)
+  - [Exercise 3 — Qualify the Lead](#dqa-exercise-3--qualify-the-lead-lead-qualification-agent)
+  - [Exercise 4 — Simulate Engagement](#dqa-exercise-4--simulate-engagement)
+  - [Exercise 5 — Convert to Account and Contact](#dqa-exercise-5--convert-the-lead-to-account-and-contact)
+  - [Exercise 6 — Convert to an Opportunity](#dqa-exercise-6--convert-the-lead-to-an-opportunity)
+  - [Exercise 7 — Joule Conversational Interface (Optional)](#dqa-exercise-7--explore-the-joule-conversational-interface-optional)
+- [7. Sample Prompts to Try in Joule](#dqa-7-sample-prompts-to-try-in-joule)
+- [8. Frequently Asked Questions](#dqa-8-frequently-asked-questions)
+- [9. Wrap-up and Key Takeaways](#dqa-9-wrap-up-and-key-takeaways)
+
+### [Part 2 · Service Cloud — Case Management Assistant](#case-management-assistant--hands-on-tutorial)
+
+- [1. Session Overview](#cma-1-session-overview)
+- [2. What Is the Case Management Assistant?](#cma-2-what-is-the-case-management-assistant)
+- [3. Meet Sarah — Why This Matters](#cma-3-meet-sarah--why-this-matters)
+- [4. How the Assistant Works, End to End](#cma-4-how-the-assistant-works-end-to-end)
+- [5. Prerequisites and System Access](#cma-5-prerequisites-and-system-access)
+- [6. Hands-on Exercises](#cma-6-hands-on-exercises)
+  - [Exercise 1 — Open an Inbound Email Case and Copy](#cma-exercise-1--open-an-inbound-email-case-and-copy)
+  - [Exercise 2 — Trigger the Case Preparation](#cma-exercise-2--trigger-the-case-preparation)
+  - [Exercise 3 — Trigger the Next Action](#cma-exercise-3--trigger-the-next-action)
+  - [Exercise 5 — Trigger Registration and Verify](#cma-exercise-5--trigger-registration-and-optional-verify)
+  - [Exercise 6 — Send Confirmation Email](#cma-exercise-6--send-confirmation-email)
+  - [Exercise 7 — Explore via Joule (Optional)](#cma-exercise-7--optional-explore-via-joule)
+- [7. Sample Prompts for Joule](#cma-7-sample-prompts-for-joule)
+- [8. Frequently Asked Questions](#cma-8-frequently-asked-questions)
+- [9. Wrap-up and Key Takeaways](#cma-9-wrap-up-and-key-takeaways)
+
+---
 
 ### Sales Cloud - Deal Qualification Assistant — Hands-on Tutorial
 
@@ -18,28 +60,7 @@ Please edit this file as it is the primary description file for your project. Yo
 
 ---
 
-## Table of Contents
-
-1. [Session Overview](#1-session-overview)
-2. [What Is the Deal Qualification Assistant?](#2-what-is-the-deal-qualification-assistant)
-3. [Meet Felicia — Why This Matters](#3-meet-felicia--why-this-matters)
-4. [How the Assistant Works, End to End](#4-how-the-assistant-works-end-to-end)
-5. [Prerequisites and System Access](#5-prerequisites-and-system-access)
-6. [Hands-on Exercises](#6-hands-on-exercises)
-   - [Exercise 1 — Create a Lead](#exercise-1--create-a-lead)
-   - [Exercise 2 — Enrich the Lead (Lead Enrichment Agent)](#exercise-2--enrich-the-lead-lead-enrichment-agent)
-   - [Exercise 3 — Qualify the Lead (Lead Qualification Agent)](#exercise-3--qualify-the-lead-lead-qualification-agent)
-   - [Exercise 4 — Simulate Engagement](#exercise-4--simulate-engagement)
-   - [Exercise 5 — Convert the Lead to Account and Contact](#exercise-5--convert-the-lead-to-account-and-contact)
-   - [Exercise 6 — Convert the Lead to an Opportunity](#exercise-6--convert-the-lead-to-an-opportunity)
-   - [Exercise 7 — Explore the Joule Conversational Interface (Optional)](#exercise-7--explore-the-joule-conversational-interface-optional)
-7. [Sample Prompts to Try in Joule](#7-sample-prompts-to-try-in-joule)
-8. [Frequently Asked Questions](#8-frequently-asked-questions)
-9. [Wrap-up and Key Takeaways](#9-wrap-up-and-key-takeaways)
-
----
-
-## 1. Session Overview
+## <a id="dqa-1-session-overview"></a>1. Session Overview
 
 Welcome to the hands-on lab for the Deal Qualification Assistant, part of the Autonomous Sales and Revenue capabilities in SAP Sales Cloud. In this session you will work in a preconfigured SAP system and experience, first-hand, how a set of collaborating AI agents turns a bare lead into a qualified, context-rich opportunity — without the sales rep having to jump between screens.
 
@@ -63,7 +84,7 @@ Welcome to the hands-on lab for the Deal Qualification Assistant, part of the Au
 
 ---
 
-## 2. What Is the Deal Qualification Assistant?
+## <a id="dqa-2-what-is-the-deal-qualification-assistant"></a>2. What Is the Deal Qualification Assistant?
 
 The Deal Qualification Assistant is the first of three planned assistants for Autonomous Sales and Revenue in SAP Sales Cloud. It works at the top of the funnel — the lead stage — acting as an orchestrator that invokes a set of specialized agents on your behalf.
 
@@ -91,7 +112,7 @@ Within the Deal Qualification Assistant, five agents are planned. Three are avai
 
 ---
 
-## 3. Meet Felicia — Why This Matters
+## <a id="dqa-3-meet-felicia--why-this-matters"></a>3. Meet Felicia — Why This Matters
 
 Before you click anything, it helps to know whose problem this assistant solves. Felicia is a Sales Development Manager and the persona this assistant was designed around.
 
@@ -107,7 +128,7 @@ As you work through the exercises, keep Felicia's problems in mind — each agen
 
 ---
 
-## 4. How the Assistant Works, End to End
+## <a id="dqa-4-how-the-assistant-works-end-to-end"></a>4. How the Assistant Works, End to End
 
 The diagram below is the flow you will reproduce step by step in the exercises. Five data sources feed the agents, five agents each hand off a clear result to the next stage, and the end result is a qualified opportunity ready for pipeline execution.
 
@@ -125,7 +146,7 @@ The diagram below is the flow you will reproduce step by step in the exercises. 
 
 ---
 
-## 5. Prerequisites and System Access
+## <a id="dqa-5-prerequisites-and-system-access"></a>5. Prerequisites and System Access
 
 ### What is already set up for you
 
@@ -146,9 +167,9 @@ The diagram below is the flow you will reproduce step by step in the exercises. 
 
 ---
 
-## 6. Hands-on Exercises
+## <a id="dqa-6-hands-on-exercises"></a>6. Hands-on Exercises
 
-### Exercise 1 — Create a Lead
+### <a id="dqa-exercise-1--create-a-lead"></a>Exercise 1 — Create a Lead
 
 Start where most leads start: with very little information. Imagine this lead just arrived from a web form.
 
@@ -164,7 +185,7 @@ Start where most leads start: with very little information. Imagine this lead ju
 
 ---
 
-### Exercise 2 — Enrich the Lead (Lead Enrichment Agent)
+### <a id="dqa-exercise-2--enrich-the-lead-lead-enrichment-agent"></a>Exercise 2 — Enrich the Lead (Lead Enrichment Agent)
 
 1. On the open lead, click **Initiate Deal Qualification Assistant**.
 2. Wait for the assistant to run. Because the lead status is **Open**, the assistant invokes the **Lead Enrichment Agent**.
@@ -176,7 +197,7 @@ Start where most leads start: with very little information. Imagine this lead ju
 
 ---
 
-### Exercise 3 — Qualify the Lead (Lead Qualification Agent)
+### <a id="dqa-exercise-3--qualify-the-lead-lead-qualification-agent"></a>Exercise 3 — Qualify the Lead (Lead Qualification Agent)
 
 1. With the lead now **Enriched**, click **Initiate Deal Qualification Assistant** again.
 2. This time the assistant invokes the **Lead Qualification Agent**, since the lead is already enriched.
@@ -188,7 +209,7 @@ Start where most leads start: with very little information. Imagine this lead ju
 
 ---
 
-### Exercise 4 — Simulate Engagement
+### <a id="dqa-exercise-4--simulate-engagement"></a>Exercise 4 — Simulate Engagement
 
 In production, the future Sales Engagement Agent would draft and send this outreach automatically. Since that agent is still on the roadmap, this step is manual so you can see how the Lead Qualification Agent reads engagement signals.
 
@@ -201,7 +222,7 @@ In production, the future Sales Engagement Agent would draft and send this outre
 
 ---
 
-### Exercise 5 — Convert the Lead to Account and Contact
+### <a id="dqa-exercise-5--convert-the-lead-to-account-and-contact"></a>Exercise 5 — Convert the Lead to Account and Contact
 
 1. Click **Initiate Deal Qualification Assistant** again.
 2. The assistant now proposes converting the lead into a proper **Account and Contact** (rather than staying a prospect), and the qualification may change to **HOT**.
@@ -213,7 +234,7 @@ In production, the future Sales Engagement Agent would draft and send this outre
 
 ---
 
-### Exercise 6 — Convert the Lead to an Opportunity
+### <a id="dqa-exercise-6--convert-the-lead-to-an-opportunity"></a>Exercise 6 — Convert the Lead to an Opportunity
 
 1. Back on the lead, click **Initiate Deal Qualification Assistant** one more time.
 2. The assistant now proposes converting the lead into an **Opportunity**, again with reasons tied to the interactions and survey responses collected so far.
@@ -223,7 +244,7 @@ In production, the future Sales Engagement Agent would draft and send this outre
 
 ---
 
-### Exercise 7 — Explore the Joule Conversational Interface (Optional)
+### <a id="dqa-exercise-7--explore-the-joule-conversational-interface-optional"></a>Exercise 7 — Explore the Joule Conversational Interface (Optional)
 
 If SAP Managed Joule for Sales and Service is enabled on your tenant, try the same capability conversationally instead of clicking through the lead record.
 
@@ -237,7 +258,7 @@ If SAP Managed Joule for Sales and Service is enabled on your tenant, try the sa
 
 ---
 
-## 7. Sample Prompts to Try in Joule
+## <a id="dqa-7-sample-prompts-to-try-in-joule"></a>7. Sample Prompts to Try in Joule
 
 Use these as a starting point, then try your own. Facilitators recommend testing prompts against your own data set before rolling this out to business users.
 
@@ -250,7 +271,7 @@ Use these as a starting point, then try your own. Facilitators recommend testing
 
 ---
 
-## 8. Frequently Asked Questions
+## <a id="dqa-8-frequently-asked-questions"></a>8. Frequently Asked Questions
 
 **Do I need SAP Managed Joule to use the Deal Qualification Assistant?**
 No. The embedded, in-lead experience (Exercises 1–6) works without it. SAP Managed Joule is only required for the conversational experience in Exercise 7.
@@ -272,7 +293,7 @@ Ask your facilitator about access to a development/test landscape, and watch for
 
 ---
 
-## 9. Wrap-up and Key Takeaways
+## <a id="dqa-9-wrap-up-and-key-takeaways"></a>9. Wrap-up and Key Takeaways
 
 - The Deal Qualification Assistant orchestrates a small set of purpose-built agents — enrichment, qualification, and conversion today; routing and engagement to follow.
 - Each agent hands off one clear result to the next: enriched profile → score & priority → engaged lead → owner assigned → opportunity created.
@@ -294,27 +315,7 @@ Ask your facilitator about access to a development/test landscape, and watch for
 
 ---
 
-## Table of Contents
-
-1. [Session Overview](#1-session-overview)
-2. [What Is the Case Management Assistant?](#2-what-is-the-case-management-assistant)
-3. [Meet Sarah — Why This Matters](#3-meet-sarah--why-this-matters)
-4. [How the Assistant Works, End to End](#4-how-the-assistant-works-end-to-end)
-5. [Prerequisites and System Access](#5-prerequisites-and-system-access)
-6. [Hands-on Exercises](#6-hands-on-exercises)
-   - [Exercise 1 — Open an Inbound Email Case and Copy](#exercise-1--open-an-inbound-email-case-and-copy)
-   - [Exercise 2 — Trigger the Case Preparation](#exercise-2--trigger-the-case-preparation)
-   - [Exercise 3 — Trigger the Next Action](#exercise-3--trigger-the-next-action)
-   - [Exercise 5 — Trigger Registration and Verify](#exercise-5--trigger-registration-and-optional-verify)
-   - [Exercise 6 — Send Confirmation Email](#exercise-6--send-confirmation-email)
-   - [Exercise 7 — Explore via Joule (Optional)](#exercise-7--optional-explore-via-joule)
-7. [Sample Prompts for Joule](#7-sample-prompts-for-joule)
-8. [Frequently Asked Questions](#8-frequently-asked-questions)
-9. [Wrap-up and Key Takeaways](#9-wrap-up-and-key-takeaways)
-
----
-
-## 1. Session Overview
+## <a id="cma-1-session-overview"></a>1. Session Overview
 
 This is a ~60–75 minute self-paced hands-on lab running on a preconfigured SAP Service Cloud V2 tenant. You will work through the end-to-end lifecycle of a service case handled by the Case Management Assistant — from the moment an email arrives, through intelligent preparation and triage, guided resolution with Next Best Actions, to final customer acknowledgement.
 
@@ -327,7 +328,7 @@ This is a ~60–75 minute self-paced hands-on lab running on a preconfigured SAP
 
 ---
 
-## 2. What Is the Case Management Assistant?
+## <a id="cma-2-what-is-the-case-management-assistant"></a>2. What Is the Case Management Assistant?
 
 The Case Management Assistant is part of the broader **Autonomous Service** stream in SAP Service Cloud V2.
 
@@ -345,7 +346,7 @@ The Case Management Assistant transforms how service teams handle cases by autom
 
 ---
 
-## 3. Meet Sarah — Why This Matters
+## <a id="cma-3-meet-sarah--why-this-matters"></a>3. Meet Sarah — Why This Matters
 
 Before you click anything, it helps to know whose problem this assistant solves. Sarah is a Service Representative and the persona this assistant was designed around.
 
@@ -359,7 +360,7 @@ During the exercises, each agent triggered is designed to solve exactly one of t
 
 ---
 
-## 4. How the Assistant Works, End to End
+## <a id="cma-4-how-the-assistant-works-end-to-end"></a>4. How the Assistant Works, End to End
 
 | Stage | Trigger | Agent | Result |
 |---|---|---|---|
@@ -373,7 +374,7 @@ During the exercises, each agent triggered is designed to solve exactly one of t
 
 ---
 
-## 5. Prerequisites and System Access
+## <a id="cma-5-prerequisites-and-system-access"></a>5. Prerequisites and System Access
 
 ### What is pre-configured for you
 
@@ -391,13 +392,13 @@ During the exercises, each agent triggered is designed to solve exactly one of t
 
 ---
 
-## 6. Hands-on Exercises
+## <a id="cma-6-hands-on-exercises"></a>6. Hands-on Exercises
 
 Work through the exercises in order. Each builds on the previous one. **Estimated total time: 10–15 minutes.**
 
 ---
 
-### Exercise 1 — Open an Inbound Email Case and Copy
+### <a id="cma-exercise-1--open-an-inbound-email-case-and-copy"></a>Exercise 1 — Open an Inbound Email Case and Copy
 
 1. Log in to **SAP Service Cloud V2** with the credentials on your lab card.
 2. Navigate to **Cases → All Cases**.
@@ -412,7 +413,7 @@ Work through the exercises in order. Each builds on the previous one. **Estimate
 
 ---
 
-### Exercise 2 — Trigger the Case Preparation
+### <a id="cma-exercise-2--trigger-the-case-preparation"></a>Exercise 2 — Trigger the Case Preparation
 
 1. Click the **"Prepare Case"** button.
 2. Watch the updates populate in real time. The **Case Preparation Agent** will:
@@ -426,7 +427,7 @@ Work through the exercises in order. Each builds on the previous one. **Estimate
 
 ---
 
-### Exercise 3 — Trigger the Next Action
+### <a id="cma-exercise-3--trigger-the-next-action"></a>Exercise 3 — Trigger the Next Action
 
 1. After case preparation, the assistant automatically triggers the **Case Processing Agent**.
 2. The AI Agent proposes the next action. Click on **"Smart Analysis"**.
@@ -436,7 +437,7 @@ Work through the exercises in order. Each builds on the previous one. **Estimate
 
 ---
 
-### Exercise 5 — Trigger Registration and (Optional) Verify
+### <a id="cma-exercise-5--trigger-registration-and-optional-verify"></a>Exercise 5 — Trigger Registration and (Optional) Verify
 
 1. Click on **"Register Refrigerator"**.
 2. The AI Agent registers the product and provides a **Registration Update**.
@@ -447,7 +448,7 @@ Work through the exercises in order. Each builds on the previous one. **Estimate
 
 ---
 
-### Exercise 6 — Send Confirmation Email
+### <a id="cma-exercise-6--send-confirmation-email"></a>Exercise 6 — Send Confirmation Email
 
 1. On the Case detail screen – **AI Mode (Assistant)** tab, click on **"Review and send confirmation email"**.
 2. The **Email** tab opens automatically with the draft email content filled in.
@@ -458,7 +459,7 @@ Work through the exercises in order. Each builds on the previous one. **Estimate
 
 ---
 
-### Exercise 7 — (Optional) Explore via Joule
+### <a id="cma-exercise-7--optional-explore-via-joule"></a>Exercise 7 — (Optional) Explore via Joule
 
 > **Note:** This exercise requires SAP Managed Joule for Service. If Joule is not available in your lab tenant, you may skip this exercise.
 
@@ -473,7 +474,7 @@ Work through the exercises in order. Each builds on the previous one. **Estimate
 
 ---
 
-## 7. Sample Prompts for Joule
+## <a id="cma-7-sample-prompts-for-joule"></a>7. Sample Prompts for Joule
 
 Use these as a starting point and try your own.
 
@@ -486,7 +487,7 @@ Use these as a starting point and try your own.
 
 ---
 
-## 8. Frequently Asked Questions
+## <a id="cma-8-frequently-asked-questions"></a>8. Frequently Asked Questions
 
 **Do I need Joule to use the Case Management Assistant?**
 No. Exercises 1–6 use the assistant embedded directly in the case detail UI. Joule is only needed for Exercise 7.
@@ -505,7 +506,7 @@ Internal / EAC use only until General Availability. Do not share tenant credenti
 
 ---
 
-## 9. Wrap-up and Key Takeaways
+## <a id="cma-9-wrap-up-and-key-takeaways"></a>9. Wrap-up and Key Takeaways
 
 - The Case Management Assistant orchestrates a set of purpose-built agents working together end to end.
 - The **Case Preparation Agent** prepares and enriches a case by adding a problem summary, categorisation, prioritisation, and entity extraction.
