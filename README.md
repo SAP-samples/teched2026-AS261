@@ -342,7 +342,7 @@ Before you click anything, it helps to know whose problem this assistant solves.
 
 - **Inbox overload** — Dozens of cases are created every day, and Sarah spends significant time reading through the subject, description, and other information.
 - **Context switching for pre-checks** — Each new case requires Sarah to look up the customer's details, entitlement status, and registered products across different screens.
-- **Resolution and follow-up actions** — Her team of 12 handles similar cases in 12 different ways. There is no systematic guidance on what to do next, so resolution quality depends entirely on individual experience.
+- **Resolution and follow-up actions** — Service agents handle similar cases in different ways. There is no systematic guidance on what to do next, so resolution quality depends entirely on individual experience.
 
 During the exercises, each agent triggered is designed to solve exactly one of these problems.
 
@@ -368,7 +368,7 @@ During the exercises, each agent triggered is designed to solve exactly one of t
 
 - A SAP Service Cloud V2 tenant with Case Management Assistant activated
 - A user account with service representative role and access to the **Cases** application
-- A pre-loaded customer account (cbont Industries)
+- A pre-loaded customer account (Individual customer Taylor Jones)
 - Sample inbound email cases pre-staged in the system inbox
 - Joule configured (for Exercise 7 only)
 
