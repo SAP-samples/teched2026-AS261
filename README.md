@@ -57,7 +57,7 @@ Welcome to the hands-on lab for the Deal Qualification Assistant, part of the Au
 - Create a lead with minimal information, the way it typically arrives from a web form or campaign.
 - Trigger the Deal Qualification Assistant and watch the **Lead Enrichment Agent** add firmographic and technographic context.
 - Trigger the assistant again and see the **Lead Qualification Agent** score fit and intent, moving the lead from Enriched to Accepted.
-- Simulate rep engagement (emails, notes, an appointment) and optionally complete a qualification survey.
+- Simulate Sales rep engagement (emails, notes, appointment) and optionally complete a qualification survey.
 - Accept the assistant's proposal to convert the lead into an Account and Contact.
 - Accept the assistant's proposal to convert the qualified lead into an Opportunity, complete with an AI-generated handover summary.
 - Explore the same capability conversationally through Joule.
@@ -66,9 +66,9 @@ Welcome to the hands-on lab for the Deal Qualification Assistant, part of the Au
 
 - **Duration:** approx. 60–75 minutes, self-paced with facilitators circulating.
 - You will work individually on a preconfigured tenant assigned to your seat — do not use production or customer systems.
-- **Facilitators:** Kiran and Vatsal. Raise your hand or flag a facilitator at any time.
+- **Facilitators:** Anshika & Yogesh. Raise your hand or flag a facilitator at any time.
 
-> **Confidentiality:** This material is shared for the SAP TechEd hands-on session and for EAC (Early Adopter Care) participants only. The Deal Qualification Assistant is in Early Adopter Care and features, screens, and field names may change before general availability.
+> **Confidentiality:** This material is shared for the SAP TechEd hands-on session only. The Deal Qualification Assistant is in Early Adopter Care and features, screens, and field names may change before general availability.
 
 ---
 
@@ -76,13 +76,15 @@ Welcome to the hands-on lab for the Deal Qualification Assistant, part of the Au
 
 The Deal Qualification Assistant is the first of three planned assistants for Autonomous Sales and Revenue in SAP Sales Cloud. It works at the top of the funnel — the lead stage — acting as an orchestrator that invokes a set of specialized agents on your behalf.
 
-*Figure 1 — Autonomous Agents in Sales Cloud: the Deal Qualification Assistant is one of three assistants planned for Autonomous Sales and Revenue.*
+<img width="840" height="474" alt="image" src="https://github.com/user-attachments/assets/5987b756-a490-40d6-b3c2-0f317e294dcc" />
+
+*Autonomous Agents in Sales Cloud: the Deal Qualification Assistant is one of three assistants planned for Autonomous Sales and Revenue.*
 
 The three assistants are phased by where they sit in the deal lifecycle:
 
 | Assistant | Lifecycle Stage | Status |
 |---|---|---|
-| Deal Qualification Assistant | Lead stage — enrichment, qualification, conversion | **In this hands-on session (EAC)** |
+| Deal Qualification Assistant | Lead stage — enrichment, qualification, conversion | **In this hands-on session (Teched)** |
 | Sales Assistant | Opportunity stage — deal management, meetings, email, risk | Roadmap |
 | Deal Closing Assistant | Quote and order stage | Roadmap |
 
@@ -104,7 +106,9 @@ Within the Deal Qualification Assistant, five agents are planned. Three are avai
 
 Before you click anything, it helps to know whose problem this assistant solves. Felicia is a Sales Development Manager and the persona this assistant was designed around.
 
-*Figure 2 — Felicia's three problems: lead quality, focus on the right leads, and effective conversion.*
+<img width="840" height="474" alt="image" src="https://github.com/user-attachments/assets/90b5fe9c-10e2-45e8-b3d9-dc19caac2b03" />
+
+*Felicia's three problems: lead quality, focus on the right leads, and effective conversion.*
 
 ### Felicia's three problems
 
@@ -120,15 +124,17 @@ As you work through the exercises, keep Felicia's problems in mind — each agen
 
 The diagram below is the flow you will reproduce step by step in the exercises. Five data sources feed the agents, five agents each hand off a clear result to the next stage, and the end result is a qualified opportunity ready for pipeline execution.
 
-*Figure 3 — Deal Qualification Assistant data flow: from raw lead data to a qualified opportunity.*
+<img width="840" height="474" alt="image" src="https://github.com/user-attachments/assets/53ab1838-2451-4856-a1d5-7580b6975650" />
+
+*Deal Qualification Assistant data flow: from raw lead data to a qualified opportunity.*
 
 | Stage | Trigger | Result |
 |---|---|---|
-| Enrichment | Click **"Initiate Deal Qualification Assistant"** on an Open lead | Lead status → Enriched; AI Updates panel populated |
+| Enrichment | Click **"Initiate Deal Qualification Assistant"** on an Open lead or in Joule works start with a prompt | Lead status → Enriched; AI Updates panel populated |
 | Qualification | Click the assistant again on an Enriched lead | Fitment score calculated; status → Accepted (or Rejected) |
 | Engagement (simulated) | Rep logs emails, calls, notes, an appointment | Interaction history available for the agent to factor in |
 | Conversion (to Account) | Click the assistant again after engagement | Proposal to create Account + Contact; qualification may move to HOT |
-| Conversion (to Opportunity) | Click the assistant again after BANT/qualification survey | Proposal to convert to Opportunity with an AI-generated handover summary |
+| Conversion (to Opportunity) | Click the assistant again after qualification survey | Proposal to convert to Opportunity with an AI-generated handover summary |
 
 > **Scope:** Today's demo scope does not integrate with S/4HANA or Master Data Governance (MDG); the Deal Qualification Assistant works purely within the lead-to-opportunity process in Sales Cloud.
 
@@ -151,7 +157,7 @@ The diagram below is the flow you will reproduce step by step in the exercises. 
 
 - Activation in a real tenant is a two-step process: (1) provisioning and connectivity, handled by SAP during onboarding, and (2) configuration of lead settings such as ICP fitment and status rules, done once by an admin. Both steps are already done for you in this lab.
 - Any user with access to Leads can use the Deal Qualification Assistant — there is no separate agent-specific role to assign.
-- If you want to try the conversational (Joule) experience in Exercise 7, this requires SAP Managed Joule for Sales and Service to be enabled on the tenant; the embedded, in-lead experience (Exercises 2–6) does not require this.
+- If you want to try the conversational (Joule) experience in Exercise 7, this requires SAP Managed Joule for Sales and Service to be enabled on the tenant; the embedded, in-lead experience (Exercises 2–6) does not require this, however you can activate assistant via Joule as well.
 
 ---
 
@@ -163,11 +169,12 @@ Start where most leads start: with very little information. Imagine this lead ju
 
 1. In your Sales Cloud tenant, navigate to **Leads**.
 2. Click **New** and enter only the basic details a web form would typically capture:
-   - Company name
+   - Lead Name
+   - Company/Account name
    - Contact first and last name
    - Contact email address
-3. Save the lead. Note the **Lead Status** — it should be **Open**.
-4. Open the lead record and look at the **AI Updates** section — it should be empty at this point.
+4. Save the lead. Note the **Lead Status** — it should be **Open**.
+5. Open the lead record and look at the **AI Updates** section — it should be empty at this point.
 
 > **Note:** This is intentional: with only a name, company, and email, a rep has almost nothing to work with, either to engage the prospect or to judge how important this lead is.
 
@@ -175,22 +182,22 @@ Start where most leads start: with very little information. Imagine this lead ju
 
 ### <a id="dqa-exercise-2--enrich-the-lead-lead-enrichment-agent"></a>Exercise 2 — Enrich the Lead (Lead Enrichment Agent)
 
-1. On the open lead, click **Initiate Deal Qualification Assistant**.
+1. On the open lead, click **Initiate Deal Qualification Assistant**. For Joule prompts refer to <a id="dqa-exercise-7--explore-the-joule-conversational-interface-optional">Excercise 7</a>
 2. Wait for the assistant to run. Because the lead status is **Open**, the assistant invokes the **Lead Enrichment Agent**.
 3. Review the **AI Updates** section — it should now list what the agent added, for example website and other firmographic/technographic details that belong to the lead data model.
 4. Scroll to any **Notes** added by the agent — these capture details that aren't part of the formal data model but are useful talking points for the rep (e.g. recent company news, technographic signals).
 5. Check the **Lead Status** — it should have moved from **Open** to **Enriched**.
 
-> **Expected outcome:** → **ENRICHED PROFILE** is the agent's hand-off to the next stage, exactly as shown in Figure 3.
+> **Expected outcome:** → **ENRICHED PROFILE** is the agent's hand-off to the next stage.
 
 ---
 
 ### <a id="dqa-exercise-3--qualify-the-lead-lead-qualification-agent"></a>Exercise 3 — Qualify the Lead (Lead Qualification Agent)
 
-1. With the lead now **Enriched**, click **Initiate Deal Qualification Assistant** again.
+1. With the lead now **Enriched**, click **Initiate Deal Qualification Assistant** again or go to Joule and type "Summarize the AI updates for [Lead Name]."
 2. This time the assistant invokes the **Lead Qualification Agent**, since the lead is already enriched.
 3. Review the **AI Updates** — you should see a **Fitment Score** (for example, 70), calculated against your organization's Ideal Customer Profile (ICP).
-4. Check the **Lead Status** — a fitment score high enough to pass your configured threshold moves the status from **Enriched** to **Accepted**.
+4. Check the **Lead Status** — a fitment score high enough to pass admin configured threshold moves the status from **Enriched** to **Accepted**.
 5. Read the reasoning the agent provides for the score — this is what a rep would use to decide whether and how urgently to act.
 
 > **Expected outcome:** → **SCORE & PRIORITY**. If your lead does not clear the threshold, the status may not change to Accepted — try enriching a second lead with different data to compare outcomes.
@@ -199,7 +206,7 @@ Start where most leads start: with very little information. Imagine this lead ju
 
 ### <a id="dqa-exercise-4--simulate-engagement"></a>Exercise 4 — Simulate Engagement
 
-In production, the future Sales Engagement Agent would draft and send this outreach automatically. Since that agent is still on the roadmap, this step is manual so you can see how the Lead Qualification Agent reads engagement signals.
+The future Sales Engagement Agent would draft and send this outreach automatically. Since that agent is still on the roadmap, this step is manual so you can see how the Lead Qualification Agent reads engagement signals.
 
 1. On your **Accepted** lead, log at least two interactions, for example:
    - An email sent to the contact
@@ -234,7 +241,7 @@ In production, the future Sales Engagement Agent would draft and send this outre
 
 ### <a id="dqa-exercise-7--explore-the-joule-conversational-interface-optional"></a>Exercise 7 — Explore the Joule Conversational Interface (Optional)
 
-If SAP Managed Joule for Sales and Service is enabled on your tenant, try the same capability conversationally instead of clicking through the lead record.
+SAP Managed Joule for Sales and Service is enabled on your tenant, try the same capability conversationally instead of clicking through the lead record.
 
 1. Open **Joule** and start a conversation.
 2. Ask: *"What leads do I focus on today?"* — Joule invokes the relevant agent and returns a prioritized list with reasoning; selecting a lead populates its details.
@@ -242,7 +249,9 @@ If SAP Managed Joule for Sales and Service is enabled on your tenant, try the sa
 4. Try a broader question, such as *"What are the leads that were recently updated?"*
 5. Try a pointed question about a specific lead, such as *"Does [lead/company name] fit our ICP?"* — this invokes the Lead Qualification Agent for a direct answer.
 
-*Figure 4 — Joule work: Conversations, Spaces, and Develop bring the same agents into a chat-first experience.*
+<img width="800" height="448" alt="image" src="https://github.com/user-attachments/assets/b4f206e9-9abe-4f2b-bda6-d78963f72761" />
+
+*Joule work: Conversations, Spaces, and Develop bring the same agents into a chat-first experience.*
 
 ---
 
@@ -262,19 +271,17 @@ Use these as a starting point, then try your own. Facilitators recommend testing
 ## <a id="dqa-8-frequently-asked-questions"></a>8. Frequently Asked Questions
 
 **Do I need SAP Managed Joule to use the Deal Qualification Assistant?**
-No. The embedded, in-lead experience (Exercises 1–6) works without it. SAP Managed Joule is only required for the conversational experience in Exercise 7.
+No. The embedded, in-lead experience (Exercises 1–6) works without it. SAP Managed Joule is only required for the conversational experience in <a id="dqa-exercise-7--explore-the-joule-conversational-interface-optional">Exercise 7</a>.
 
 **Can I skip straight from a new lead to a converted opportunity?**
 Not today. Each stage currently requires an explicit invocation of the assistant (either the button in the embedded experience or a Joule request) — there is no automatic background fast-tracking yet, partly to keep token consumption predictable. This is a known area the product team is exploring for the future.
 
 **Does this check against Master Data Governance (MDG) or integrate with S/4HANA?**
-Not in this release. The Deal Qualification Assistant is scoped to the lead-to-opportunity process in Sales Cloud and does not check MDG or touch S/4HANA. The upcoming Deal Closing Assistant will have S/4 touchpoints on the quotation and order side.
+Not in this release. The Deal Qualification Assistant is scoped to the lead-to-opportunity process in Sales Cloud and does not check MDG or touch S/4HANA.
 
 **Is there a special role needed to use these agents?**
 No separate agent role is required. If a user already has access to Leads, they can use the Deal Qualification Assistant.
 
-**How is usage/consumption estimated?**
-As a rough approximation for forecasting, multiply the number of users who have Lead access by the number of assistant invocations (actions) you expect them to perform.
 
 **Where can I try this after the conference?**
 Ask your facilitator about access to a development/test landscape, and watch for the recorded demo and configuration guide, which are in draft. Per SAP's Early Adopter Care terms, please do not share recordings, configuration guides, or this tutorial outside SAP until the product is generally available and marketing has confirmed it can be shared externally.
