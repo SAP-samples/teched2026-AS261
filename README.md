@@ -167,8 +167,9 @@ The diagram below is the flow you will reproduce step by step in the exercises. 
 
 Start where most leads start: with very little information. Imagine this lead just arrived from a web form.
 
-1. In your Sales Cloud tenant, navigate to **Leads**.
-2. Click **New** and enter only the basic details a web form would typically capture:
+1. In your Sales Cloud tenant, navigate to **Leads**. Alternatively, you can also go to the Joule Works and type **@deal** and select the deal qualification assistant and then type the details you have to create a lead.
+> Example Prompt: Create a new lead called Product Interest in Roadshow for prospect - [Company Name] and the main contact is [Contact Name] and his email address is [email address].
+3. Click **New** and enter only the basic details a web form would typically capture:
    - Lead Name
    - Company/Account name
    - Contact first and last name
@@ -182,9 +183,9 @@ Start where most leads start: with very little information. Imagine this lead ju
 
 ### <a id="dqa-exercise-2--enrich-the-lead-lead-enrichment-agent"></a>Exercise 2 — Enrich the Lead (Lead Enrichment Agent)
 
-1. On the open lead, click **Initiate Deal Qualification Assistant**. For Joule prompts refer to <a id="dqa-exercise-7--explore-the-joule-conversational-interface-optional">Excercise 7</a>
+1. On the open lead, click **Initiate Deal Qualification Assistant**. Alternatively, go to Joule works and in the same conversation type - _Enrich lead [Lead ID]_
 2. Wait for the assistant to run. Because the lead status is **Open**, the assistant invokes the **Lead Enrichment Agent**.
-3. Review the **AI Updates** section — it should now list what the agent added, for example website and other firmographic/technographic details that belong to the lead data model.
+3. Review the **AI Updates** section — it should now list what the agent added, for example, website and other firmographic/technographic details that belong to the lead data model, or in Joule Works type _"Summarize the AI updates for [Lead Name]."_
 4. Scroll to any **Notes** added by the agent — these capture details that aren't part of the formal data model but are useful talking points for the rep (e.g. recent company news, technographic signals).
 5. Check the **Lead Status** — it should have moved from **Open** to **Enriched**.
 
@@ -194,7 +195,7 @@ Start where most leads start: with very little information. Imagine this lead ju
 
 ### <a id="dqa-exercise-3--qualify-the-lead-lead-qualification-agent"></a>Exercise 3 — Qualify the Lead (Lead Qualification Agent)
 
-1. With the lead now **Enriched**, click **Initiate Deal Qualification Assistant** again or go to Joule and type "Summarize the AI updates for [Lead Name]."
+1. With the lead now **Enriched**, click **Initiate Deal Qualification Assistant** again or go to Joule and type _Qualify lead [Leadid]_
 2. This time the assistant invokes the **Lead Qualification Agent**, since the lead is already enriched.
 3. Review the **AI Updates** — you should see a **Fitment Score** (for example, 70), calculated against your organization's Ideal Customer Profile (ICP).
 4. Check the **Lead Status** — a fitment score high enough to pass admin configured threshold moves the status from **Enriched** to **Accepted**.
@@ -206,7 +207,7 @@ Start where most leads start: with very little information. Imagine this lead ju
 
 ### <a id="dqa-exercise-4--simulate-engagement"></a>Exercise 4 — Simulate Engagement
 
-The future Sales Engagement Agent would draft and send this outreach automatically. Since that agent is still on the roadmap, this step is manual so you can see how the Lead Qualification Agent reads engagement signals.
+The future Sales Engagement Agent would automatically draft and send this outreach. Since that agent is still on the roadmap, this step is manual so you can see how the Lead Qualification Agent reads engagement signals.
 
 1. On your **Accepted** lead, log at least two interactions, for example:
    - An email sent to the contact
@@ -239,15 +240,15 @@ The future Sales Engagement Agent would draft and send this outreach automatical
 
 ---
 
-### <a id="dqa-exercise-7--explore-the-joule-conversational-interface-optional"></a>Exercise 7 — Explore the Joule Conversational Interface (Optional)
+### <a id="dqa-exercise-7--explore-the-joule-conversational-interface-optional"></a>Exercise 7 — Explore the Joule Conversational Interface
 
-SAP Managed Joule for Sales and Service is enabled on your tenant, try the same capability conversationally instead of clicking through the lead record.
+SAP Managed Joule for Sales and Service is enabled on your tenant. Try the same capability in a conversational way instead of clicking through the lead record.
 
 1. Open **Joule** and start a conversation.
-2. Ask: *"What leads do I focus on today?"* — Joule invokes the relevant agent and returns a prioritized list with reasoning; selecting a lead populates its details.
+2. Ask: *"What leads do I focus on today?"* — Joule invokes the relevant agent and returns a prioritised list with reasoning; selecting a lead populates its details.
 3. Ask Joule to enrich a specific lead by name — if it is already enriched, Joule returns the enrichment details rather than re-running the agent.
 4. Try a broader question, such as *"What are the leads that were recently updated?"*
-5. Try a pointed question about a specific lead, such as *"Does [lead/company name] fit our ICP?"* — this invokes the Lead Qualification Agent for a direct answer.
+5. Try a pointed question about a specific lead, such as *"Does [lead/company name] fit our ICP?"* — This invokes the Lead Qualification Agent for a direct answer.
 
 <img width="800" height="448" alt="image" src="https://github.com/user-attachments/assets/b4f206e9-9abe-4f2b-bda6-d78963f72761" />
 
