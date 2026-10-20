@@ -312,7 +312,7 @@ Ask your facilitator about access to a development/test landscape, and watch for
 
 ## <a id="cma-1-session-overview"></a>1. Session Overview
 
-This is a ~60–75 minute self-paced hands-on lab running on a preconfigured SAP Service Cloud V2 tenant. You will work through the end-to-end lifecycle of a service case handled by the Case Management Assistant — from the moment an email arrives, through intelligent preparation and triage, guided resolution with Next Best Actions, to final customer acknowledgement.
+In this you will work through the end-to-end lifecycle of a service case handled by the Case Management Assistant — from the moment an email arrives, through intelligent preparation and triage, guided resolution with Next Best Actions, to final customer acknowledgement.
 
 ### By the end of this session you will have
 
@@ -327,7 +327,10 @@ This is a ~60–75 minute self-paced hands-on lab running on a preconfigured SAP
 
 The Case Management Assistant is part of the broader **Autonomous Service** stream in SAP Service Cloud V2.
 
-*Figure 1 — Autonomous Assistants and Agents under Autonomous Service: Case Management Assistant is one of the assistants planned in SAP Service Cloud.*
+<img width="742" height="412" alt="image" src="https://github.com/user-attachments/assets/8436d336-b81d-42a7-b26b-9a004c6ff8b3" />
+
+
+*Autonomous Assistants and Agents under Autonomous Service: Case Management Assistant is one of the assistants planned in SAP Service Cloud.*
 
 The Case Management Assistant transforms how service teams handle cases by automating end-to-end case workflows. It coordinates autonomous AI agents to process cases and provide service teams with real-time insights and recommendations that enable them to triage, manage, and resolve cases faster — increasing operational efficiency and improving customer experiences.
 
@@ -398,13 +401,11 @@ Work through the exercises in order. Each builds on the previous one. **Estimate
 1. Log in to **SAP Service Cloud V2** with the credentials on your lab card.
 2. Navigate to **Cases → All Cases**.
 3. Find the case with a subject similar to *"Sample Case for TechEd Session"*. Copy it.
-4. Update the subject and description to ensure a unique serial ID is given.
+4. Update the subject and description to ensure a unique serial ID is given, and then click on Save and Open
 5. Observe the case header: note what is already populated and what is missing.
-6. Open the **AI Mode (Assistant)** tab and wait for the AI Agent to provide an initial summary.
+6. Click on **AI Assistant** tab and wait for the AI Agent to provide an initial summary.
 
 > **Expected result:** Initial summary is displayed. Key fields such as category, issue summary, and priority are not yet populated. AI Agent suggests Case Preparation.
-
-> **Note:** If the AI Mode tab is not visible, check that the AI Mode tab is added on the Case Detail screen via Adaptation.
 
 ---
 
@@ -412,7 +413,7 @@ Work through the exercises in order. Each builds on the previous one. **Estimate
 
 1. Click the **"Prepare Case"** button.
 2. Watch the updates populate in real time. The **Case Preparation Agent** will:
-   - Extract the case category (example: *Product Services → Product Registration*)
+   - Extract the case category (example: *Product Support → Product Registration*)
    - Identify customer sentiment (example: *Neutral*)
    - Generate a concise issue summary
    - Surface relevant customer and product context
@@ -426,7 +427,7 @@ Work through the exercises in order. Each builds on the previous one. **Estimate
 
 1. After case preparation, the assistant automatically triggers the **Case Processing Agent**.
 2. The AI Agent proposes the next action. Click on **"Smart Analysis"**.
-3. The AI Agent validates the registration request and presents the **Product Registration Status**. Example: if the serial ID is unique then registration can proceed.
+3. The AI Agent validates the registration request and presents the **Product Registration Status**. Example: if the serial ID is unique, then registration can proceed.
 
 > **Expected result:** Product Registration Status is displayed.
 
@@ -437,7 +438,7 @@ Work through the exercises in order. Each builds on the previous one. **Estimate
 1. Click on **"Register Refrigerator"**.
 2. The AI Agent registers the product and provides a **Registration Update**.
 3. The AI Agent drafts an email and proposes the next action to review and send the email.
-4. *(Optional)* Go to **Main Menu → Registered Products** and see the registered product with the relevant serial ID in the list, or search with the serial ID / customer.
+4. *(Optional)* Go to **Main Menu → Registered Products** and see the registered product with the relevant serial ID in the list, or search with the serial ID/customer.
 
 > **Expected result:** Registration is successful.
 
@@ -445,22 +446,22 @@ Work through the exercises in order. Each builds on the previous one. **Estimate
 
 ### <a id="cma-exercise-6--send-confirmation-email"></a>Exercise 6 — Send Confirmation Email
 
-1. On the Case detail screen – **AI Mode (Assistant)** tab, click on **"Review and send confirmation email"**.
+1. On the Case detail screen – **AI Assistant** tab, click on **"Review and send confirmation email"**.
 2. The **Email** tab opens automatically with the draft email content filled in.
-3. Edit the draft if you wish. Enter the **To** email address and send.
+3. Edit the draft if you wish. Enter the **To** email address and send 
 4. Refresh the case (Refresh icon on the top of the Case left header panel) and go to the **Timeline** tab. The email sent event is displayed.
 
-> **Expected result:** Email is sent and Timeline is updated.
+> **Expected result:** Email is sent, and Timeline is updated.
 
 ---
 
-### <a id="cma-exercise-7--optional-explore-via-joule"></a>Exercise 7 — (Optional) Explore via Joule
+### <a id="cma-exercise-7--optional-explore-via-joule"></a>Exercise 7 — Explore via Joule
 
-> **Note:** This exercise requires SAP Managed Joule for Service. If Joule is not available in your lab tenant, you may skip this exercise.
+> **Note:** This exercise requires SAP Managed Joule for Service.
 
 1. Open the **Joule** work desktop.
 2. Invoke `@case management assistant` — *"Show me a list of cases that I need to look into."*
-3. Joule will surface relevant cases including the product registration case.
+3. Joule will surface relevant cases, including the product registration case.
 4. Type *"Show case \<ID\> details"* (choose a case with a registration request).
 5. The Case Management Assistant will run the **Case Preparation Agent** and return the enriched case directly in the Joule panel. The next actions are also presented and can be followed.
 6. Try additional prompts from [Section 7](#7-sample-prompts-for-joule) of this document.
