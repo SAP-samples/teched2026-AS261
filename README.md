@@ -151,6 +151,8 @@ The diagram below is the flow you will reproduce step by step in the exercises. 
 ### What you need to bring
 
 - A laptop with a supported browser (Chrome or Edge, latest version).
+- Sales & Service Cloud V2 system - https://my1002976.de1.demo.crm.cloud.sap/auth/oidc
+- Joule Works - https://747116327.eu10.sapdas.cloud.sap/new
 - Your assigned login credentials, provided at the start of the session — check with a facilitator if you did not receive one.
 
 ### Good to know before you start
