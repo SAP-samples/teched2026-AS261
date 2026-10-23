@@ -2,6 +2,8 @@
 
 Hands-on experience with AI assistants and AI agents across Autonomous CX. Explore the Deal Qualification Assistant and Case Management Assistant, and see how specialized AI assistants support and enhance key customer experience processes.
 
+Sales & Service Cloud V2 system - https://my1002976.de1.demo.crm.cloud.sap/auth/oidc
+Joule Works - https://747116327.eu10.sapdas.cloud.sap/new
 
 ### [Part 1 · Sales Cloud — Deal Qualification Assistant](#sales-cloud---deal-qualification-assistant--hands-on-tutorial)
 
