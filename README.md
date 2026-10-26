@@ -1,5 +1,7 @@
 # AS261 — Explore Autonomous CX
 
+[![REUSE status](https://api.reuse.software/badge/github.com/SAP-samples/teched2026-AS261)](https://api.reuse.software/info/github.com/SAP-samples/teched2026-AS261)
+
 Hands-on experience with AI assistants and AI agents across Autonomous CX. Explore the Deal Qualification Assistant and Case Management Assistant, and see how specialized AI assistants support and enhance key customer experience processes.
 
 Sales & Service Cloud V2 system - https://my1002976.de1.demo.crm.cloud.sap/auth/oidc
@@ -527,4 +529,4 @@ Internal / EAC use only until General Availability. Do not share tenant credenti
 
 
 ## License
-Copyright (20xx-)20xx SAP SE or an SAP affiliate company and <your-project> contributors. Please see our [LICENSE](LICENSE) for copyright and license information. Detailed information including third-party components and their licensing/copyright information is available [via the REUSE tool](https://api.reuse.software/info/github.com/SAP/<your-project>).
+Copyright 2026 SAP SE or an SAP affiliate company and AS261 contributors. Please see our [LICENSE](LICENSE) for copyright and license information. Detailed information including third-party components and their licensing/copyright information is available [via the REUSE tool](https://api.reuse.software/info/github.com/SAP-Samples/teched2026-AS261).
