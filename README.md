@@ -1,6 +1,6 @@
 # AS261 — Explore Autonomous CX
 
-[![REUSE status](https://api.reuse.software/badge/github.com/SAP-samples/teched2026-as261)](https://api.reuse.software/info/github.com/SAP-samples/teched2026-as261)
+[![REUSE status](https://api.reuse.software/badge/github.com/SAP-samples/teched2026-AS261)](https://api.reuse.software/info/github.com/SAP-samples/teched2026-AS261)
 
 Hands-on experience with AI assistants and AI agents across Autonomous CX. Explore the Deal Qualification Assistant and Case Management Assistant, and see how specialized AI assistants support and enhance key customer experience processes.
 
